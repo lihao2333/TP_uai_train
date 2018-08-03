@@ -1,0 +1,1 @@
+RUN pip3 install nltk -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
