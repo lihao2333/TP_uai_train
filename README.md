@@ -41,7 +41,7 @@ FLAGS.log_dir  /data/output
 2. 在`~/.bashrc`中最后一行添加`source /data/TP_uai_train/uai_train.bashrc`,然后执行`source ~/.bashrc`
 3. 执行`uai_gen xxx`, 会在`/data/xxx`处添加创建一个模板目录, `xxx`只是一个工程名,建议不要有数字
 4. 把你的代码放到`/data/xxx/code/中`, 把你的数据放到`/data/xxx/data`中
-5. 按照注释修改`/data/xxx/code/configall.sh`文件,主要是输入你的个人信息和一些命名
+5. `cp /data/xxx/code/configall.sh_demo /data/xxx/code/configall.sh`,然后按照注释修改`/data/xxx/code/configall.sh`文件,主要是输入你的个人信息和一些命名
 6. 执行`/data/xxx/prepare_images.sh` 自动制作镜像并且上传,在[这里](https://console.ucloud.cn/uhub/uhub/user_image)可以查看
 7. 执行`/data/xxx/prepare_data.sh` 自动将`/data/xxx/data`里面的数据上传, 在[这里](https://console.ucloud.cn/ufile/ufile/manage/normal)可以查看
 8. 执行`/data/xxx/train.sh  yyy`  自动开启训练任务,`yyy`为注释,在[这里](https://console.ucloud.cn/uaitrain/manage)可以查看
