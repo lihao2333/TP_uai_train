@@ -19,7 +19,9 @@
 ## 一些约束
 方便的代价就是必须遵循一些潜规则,就是
 > 代码中所有涉及到路径的参数,都用`FLAGS.data_dir`,`FLAGS.output_dir`, `FLAGS.log_dir`
-比如把`"./data/input/data.txt"`改为`FLAGS.data_dir+"/input/data.txt"`
+比如把`"./data/input/data.txt"`改为`FLAGS.data_dir+"input/data.txt"`  
+比如把`"./data/data.txt"`改为`FLAGS.data_dir+"/data.txt"`  
+注意到这两个例子的区别了吗? 如果有层级的话,是不能加`/`的,如果是单个文件,是需要加的,尝试出来的.
 所以你需要在你的代码中添加这两行:
 ```python
 from uaitrain.arch.tensorflow import uflag
