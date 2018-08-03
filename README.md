@@ -7,6 +7,7 @@
 但是按照官网的教程走一边,虽然能够跑通,但是很复杂,所以写了这些脚本来简化操作过程.
 
 ## uaitrian原理
+![uaitrain](readme/uai_train.jpg)
 有三个空间,分别是云主机,uhub,ufile.  
 云主机是一个工作平台,我们在上面完成操作,其实在你自己的服务器上也行,但是它的云主机和uhub,ufile在同一个内网下,传输速度比较快.  
 核心思想是, uhub提供一些基本镜像(python与tensorflow)的各种组合,基于此定制你自己的镜像(安装一些包),然后把代码也放进去.  
@@ -19,6 +20,7 @@
 ## 一些约束
 方便的代价就是必须遵循一些潜规则,就是
 > 代码中所有涉及到路径的参数,都用`FLAGS.data_dir`,`FLAGS.output_dir`, `FLAGS.log_dir`
+
 比如把`"./data/input/data.txt"`改为`FLAGS.data_dir+"/input/data.txt"`
 所以你需要在你的代码中添加这两行:
 ```python
