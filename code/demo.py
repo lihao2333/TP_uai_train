@@ -2,6 +2,7 @@
 演示一个读文件取文件的过程
 '''
 import tensorflow as tf
+import os
 
 # 所有的输入输出路径都依托与这两个变量
 DATA_DIR = "/data/data"
