@@ -8,7 +8,8 @@ elif [ -d $dir ];then
     echo "same name dir exists"
 else
     mkdir $dir
-    cp `ls|grep -v elf|grep -v uai_train.bashrc` $dir -r
+    cd /data/TP_uai_train/
+    cp `ls |grep -v elf|grep -v uai_train.bashrc` $dir -r
     sed "1 idirname=$1" -i $dir/configall.sh 
     cd $dir
 fi

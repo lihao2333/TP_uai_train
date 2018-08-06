@@ -1,5 +1,5 @@
 #prepare images
-registry=awlyrics       #镜像库名称*
+registry=awlyrics       #镜像库名称 在这里查看 https://console.ucloud.cn/uhub/uhub/user_image
 
 # 选择镜像库,可以从这里查看自己需要的版本:https://docs.ucloud.cn/ai/uai-train/guide/tensorflow/packing
 # 具体的url要从这里查看:https://console.ucloud.cn/uhub/uhub/shared_image/1139
@@ -8,11 +8,19 @@ base_image_gpu=uhub.service.ucloud.cn/uaishare/gpu_uaitrain_ubuntu-16.04_python-
 
 # 请在add_image_cmd.txt中写修改镜像的命令
 
+middle_image_cpu=${dirname/_/-}_cpu:middle # 中间cpu镜像命名 不用改
+middle_image_gpu=${dirname/_/-}_gpu:middle # 中间gpu镜像命名  不用改
+
+target_image_cpu=${dirname/_/-}_cpu:target   #目标cpu镜像命名 不用改
+target_image_gpu=${dirname/_/-}_gpu:target   #目标gpu镜像命名 不用改
+
+
 #prepare files
-project_id="org-0yv1o2" # 在控制台首页可以找到
-public_key="CRfUrnQDH3mGpq0rFTzYM4GBwVOrI9oijmJ/rdIijeOGVVX+tiMHJA==" # 在这里查看https://console.ucloud.cn/apikey
-private_key="00a9552ad1cfe927304447bec1ff8a583657a85e"
+project_id="org-0yv2o2" # 在控制台首页可以找到
+public_key="cRfUrnQDH1mGPq0rFTzYM4GBwVOrI9oijmJ/rdIijeOGVVX+tiMHJA==" # 在这里查看https://console.ucloud.cn/apikey
+private_key="10a9552ad1cfe927304447bec1ff8a583657a95e"
+bucket_name=${dirname/_/-}-bucket ##bucket 名称  不用改
 
 #train
-docker_cmd="/data/seq_gan.py" #到时候gpu中会执行`/bin/python -u [docker_cmd]`,注意code里面的文件是挂在到容器中的/data目录下.
+docker_cmd="/data/demo.py" #到时候gpu中会执行`/bin/python -u [docker_cmd]`,注意code里面的文件是挂在到容器中的/data目录下.
 max_exec_time=7  # 训练最大时长,超出自动停止
