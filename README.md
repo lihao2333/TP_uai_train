@@ -31,7 +31,7 @@ UFILE是文件空间，　 每个bucket包含了`数据`,
 6. 把你的代码放到`./code/中`, 把你的数据放到`./data`中
 7. 执行`./prepare_images.sh` 自动制作镜像并且上传,第一次使用的话，需要登录，就是你登录控制台的用户名和密码，在[这里](https://console.ucloud.cn/uhub/uhub/user_image)可以查看
 8. 执行`./prepare_data.sh` 自动将`./data`里面的数据上传, 在[这里](https://console.ucloud.cn/ufile/ufile/manage/normal)可以查看
-9. 执行`./local_test.sh` 进行本地cpu测试，确认没有问题．你可以执行`./local_access.sh`进入容器的内部，进行更加自由的测试．
+9. 执行`./local_test.sh` 进行本地cpu测试，确认没有问题．如果修改了代码，需要重新执行`./prepare_images.sh`. 你可以执行`./local_access.sh`进入容器的内部，进行更加自由的测试．
 10. 执行`./train.sh  yyy`  自动开启训练任务,`yyy`为注释,在[这里](https://console.ucloud.cn/uaitrain/manage)可以查看
 
 ## 修改参数
