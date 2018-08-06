@@ -12,7 +12,7 @@
 云主机是一个工作平台.  
 UHUB是镜像空间，　每个镜像包含了`开发环境`和`代码`  , 
 UFILE是文件空间，　 每个bucket包含了`数据`,   
-在调用aitrain任务的时候，　选择对应的镜像和bucket 就好了．
+在调用aitrain任务的时候，　将bucket挂载到镜像中，执行预定义的命令就好了．
 
 比较复杂的是用docker 制作镜像，经历如下3步:
 1. base镜像:uhub提供了一些基本镜像，是各种python和tf的组合
@@ -20,14 +20,6 @@ UFILE是文件空间，　 每个bucket包含了`数据`,
 3. target镜像: 把代码也加到镜像当中.
 
 每个镜像都有`cpu`,`gpu`两个tag, `cpu`仅用于本地测试, `gpu`是真正放到训练节点上去的
-
-## 关于路径
-在制作镜像的时候，位于/data/xxx/code中的代码会被直接加到镜像中的/data中去  
-在创建ai-train任务的时候，
-    ufile/xxx/data会被挂载到镜像中的/data/data, 用于数据输入,
-    ufile/xxx/output会被挂载到镜像中的/data/output,用于数据输出.
-
-
 
 ## 使用方式
 如果你只想快速适用,那么按照这几步来就好.
