@@ -32,10 +32,10 @@ UFILE是文件空间，　 每个bucket包含了`数据`,
 ## 使用方式
 如果你只想快速适用,那么按照这几步来就好.
 1. `git clone git@github.com:lihao2333/TP_uai_train.git /data/` 
-2. 在`~/.bashrc`中最后一行添加`source /data/TP_uai_train/uai_train.bashrc`,然后执行`source ~/.bashrc`
-3. 执行`uai_gen xxx`, 会在`/data/xxx`处添加创建一个模板目录, 并且进入.`xxx`只是一个工程名,建议不要有数字
-4. 把你的代码放到`./code/中`, 把你的数据放到`./data`中
-5. `cp ./configall.sh_demo ./configall.sh`,然后按照注释修改`./configall.sh`文件,主要是输入你的个人信息和一些命名
+2. `cp ./configall.sh_demo ./configall.sh`,然后按照注释修改`./configall.sh`文件,主要是输入你的个人信息和一些命名
+3. 在`~/.bashrc`中最后一行添加`source /data/TP_uai_train/uai_train.bashrc`,然后执行`source ~/.bashrc`
+4. 执行`uai_gen xxx`, 会在`/data/xxx`处添加创建一个模板目录, 并且进入.`xxx`只是一个工程名,建议不要有数字
+5. 把你的代码放到`./code/中`, 把你的数据放到`./data`中
 6. 执行`./prepare_images.sh` 自动制作镜像并且上传,在[这里](https://console.ucloud.cn/uhub/uhub/user_image)可以查看
 7. 执行`./prepare_data.sh` 自动将`./data`里面的数据上传, 在[这里](https://console.ucloud.cn/ufile/ufile/manage/normal)可以查看
 8. 执行`./train.sh  yyy`  自动开启训练任务,`yyy`为注释,在[这里](https://console.ucloud.cn/uaitrain/manage)可以查看
