@@ -20,7 +20,9 @@ project_id="org-0yv2o2" # 在控制台首页可以找到
 public_key="cRfUrnQDH1mGPq0rFTzYM4GBwVOrI9oijmJ/rdIijeOGVVX+tiMHJA==" # 在这里查看https://console.ucloud.cn/apikey
 private_key="10a9552ad1cfe927304447bec1ff8a583657a95e"
 bucket_name=${dirname/_/-}-bucket ##bucket 名称  不用改
+proxy="www.ufile.cn-north-02.ucloud.cn" # 在这里查看https://docs.ucloud.cn/ai/uai-train/base/ufile/files, 选择内网的会快一些
 
 #train
 docker_cmd="/data/demo.py" #到时候gpu中会执行`/bin/python -u [docker_cmd]`,注意code里面的文件是挂在到容器中的/data目录下.
 max_exec_time=7  # 训练最大时长,超出自动停止
+gpu="1-P40"  # "1-P40" 代表单机单卡,0.1元/min, ,"4-P40"代表单机4卡,0.42元/min
