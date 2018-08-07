@@ -8,7 +8,7 @@ data_dir=/data/$dirname/data
 echo "{"> ./config.cfg
 echo "    \"public_key\" : \"$public_key\",">> ./config.cfg
 echo "    \"private_key\" : \"$private_key\",">> ./config.cfg
-echo "    \"proxy_host\" : \"www.cn-bj.ufileos.com\",">> ./config.cfg
+echo "    \"proxy_host\" : \"${proxy}\",">> ./config.cfg
 echo "    \"api_host\" : \"api.spark.ucloud.cn\"">> ./config.cfg
 echo "}">> ./config.cfg
 

@@ -5,7 +5,7 @@ sudo python tf_tool.py create \
 --private_key="${private_key}" \
 --job_name="${dirname/_/-}-train"  \
 --job_memo="$1" \
---node_type="1-P40" \
+--node_type="${gpu}" \
 --code_uhub_path=uhub.service.ucloud.cn/${registry}/${target_image_gpu}  \
 --docker_cmd="-u ${docker_cmd}"  \
 --max_exec_time=${max_exec_time}  \
