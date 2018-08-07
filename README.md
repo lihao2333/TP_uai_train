@@ -21,6 +21,10 @@ UFILE是文件空间，　 每个bucket包含了`数据`,
 
 每个镜像都有`cpu`,`gpu`两个tag, `cpu`仅用于本地测试, `gpu`是真正放到训练节点上去的
 
+## 你需要准备的个人信息
+* 项目id. 在控制台首页最上面
+* 公钥私钥.在[这里](https://console.ucloud.cn/uapi/apikey)可以找到
+* 用户名和密码.就是你登录控制台的用户名和密码
 ## 使用方式
 如果你只想快速适用,那么按照这几步来就好.
 1. `git clone git@github.com:lihao2333/TP_uai_train.git /data/TP_uai_train;cd /data/TP_uai_train` 

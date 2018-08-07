@@ -13,6 +13,7 @@ middle_image_gpu=${dirname/_/-}_gpu:middle # 中间gpu镜像命名
 
 
 # docker login to have access to push images
+echo "登录docker,请输入你登录ucloud的用户名和密码"
 sudo docker login uhub.service.ucloud.cn
 
 
